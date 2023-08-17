@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "walmartsparkathon_backend": {
+      "main": "src/walmartsparkathon_backend/main.mo",
+      "type": "motoko"
+    },
+    "walmartsparkathon_frontend": {
+      "dependencies": [
+        "walmartsparkathon_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/walmartsparkathon_frontend/src/index.html"
+      },
+      "source": [
+        "src/walmartsparkathon_frontend/assets",
+        "dist/walmartsparkathon_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
